@@ -1,8 +1,9 @@
+# 🌐 DevOps & Cloud Engineer Portfolio 
 # 🌐 DevOps & Cloud Engineer Portfolio  
 
-![GitHub repo size](https://img.shields.io/github/repo-size/your-username/devops-portfolio?color=blue&style=for-the-badge)
-![GitHub stars](https://img.shields.io/github/stars/your-username/devops-portfolio?color=yellow&style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/your-username/devops-portfolio?color=teal&style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/repo-size/Funmitez/devops-portfolio?color=blue&style=for-the-badge)
+![GitHub stars](https://img.shields.io/github/stars/Funmitez/devops-portfolio?color=yellow&style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/Funmitez/devops-portfolio?color=teal&style=for-the-badge)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/adeniyi-islamiat)
 [![Email](https://img.shields.io/badge/Email-Contact%20Me-red?style=for-the-badge&logo=gmail)](mailto:adeniyimiyyah31@gmEmail.com)
 
@@ -14,7 +15,9 @@ It includes live projects, contact information, and a recommendation section whe
 ---
 
 ## 🚀 Live Demo
-👉 [View Portfolio](https://your-username.github.io/devops-portfolio/)
+👉 [View Portfolio](https://Funmitez.github.io/devops-portfolio/)
+
+---
 
 ---
 
