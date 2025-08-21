@@ -1,0 +1,837 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(-45deg, #2a003f, #1a001f, #3a005f, #0d001a);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  color: #f5f5f5;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Gradient Animation */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+section {
+  margin: 3rem auto;
+  padding: 2rem;
+  background: rgba(30, 0, 50, 0.6); /* translucent purple overlay */
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(128, 0, 255, 0.5);
+} /* ==============================
+   Sticky Horizontal Section Titles Banner
+   ============================== */
+.section-titles {
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* keep above everything */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: linear-gradient(90deg, #2a003f, #4a007f, #2a003f);
+  padding: 1rem;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+.section-titles h2 {
+  flex: 1;
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 0 6px;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #00e6e6;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.section-titles h2:hover {
+  color: #cc5500; /* burnt orange */
+  background: rgba(255, 140, 0, 0.1);
+  text-shadow: 0 0 15px rgba(204, 85, 0, 0.9);
+  transform: scale(1.05);
+}
+
+
+.container { max-width: 1100px; margin: auto; padding: 2rem; }
+header { text-align: center; padding: 4rem 2rem; background: linear-gradient(135deg, #0ea5e9, #14b8a6, #ec4899); }
+.scroll-down { margin-top: 2rem; font-size: 2rem; cursor: pointer; animation: bounce 2s infinite; }
+@keyframes bounce { 0%,20%,50%,80%,100% { transform: translateY(0);} 40% { transform: translateY(10px);} 60% { transform: translateY(5px);} }
+.about-wrapper { display: flex; gap: 2rem; align-items: center; flex-wrap: wrap; }
+.profile-pic { width: 180px; border-radius: 50%; box-shadow: 0 0 15px rgba(20,184,166,0.8); }
+#skills, #projects { border-radius: 12px; box-shadow: 0 6px 12px rgba(0,0,0,0.5); padding: 2rem; margin-top: 2rem; }
+#skills { background: linear-gradient(135deg, #0f172a, #1e293b); }
+#projects {
+  background: rgba(20, 0, 40, 0.8); /* dark transparent purple */
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(0, 180, 255, 0.4);
+}
+
+/* Subtle moving pattern overlay */
+#projects::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url("https://www.transparenttextures.com/patterns/circuits.png");
+  opacity: 0.07;
+  animation: floatPattern 30s linear infinite;
+}
+
+  @keyframes floatPattern {
+  0% { background-position: 0 0; }
+  100% { background-position: 500px 500px; }
+}
+
+.project h3 {
+  color: #00e6e6;
+  text-shadow: 0 0 10px rgba(255, 140, 0, 0.8);
+}
+
+.project { margin: 2rem 0; padding: 1rem; background: rgba(255,255,255,0.05); border-radius: 8px; }
+.read-more { background: #14b8a6; color: #0f172a; border: none; padding: 8px 15px; margin-top: 10px; cursor: pointer; border-radius: 6px; }
+.more-content { display: none; margin-top: 1rem; }
+#contact {
+  background: rgba(60, 20, 0, 0.8); /* dark burnt orange tint */
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 204, 136, 0.5)); /* burnt orange glow */
+}.contact-info a:hover {
+  color: #cc5500; /* burnt orange */
+  text-shadow: 0 0 12px rgba(0, 122, 204, 0.8);
+}
+.btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #00e6e6, #cc5500);
+  color: #fff;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  box-shadow: 0 0 15px rgba(204, 85, 0, 0.9);
+  transform: scale(1.05);
+}
+
+
+.contact-details { display: flex; flex-direction: column; gap: 1rem; font-size: 1.2rem; align-items: center; }
+#contact a { color: white; text-decoration: none; font-weight: bold; transition: all 0.3s ease; }
+#contact a:hover { color: #ffd166; text-shadow: 0 0 10px #ffd166, 0 0 20px #ff6b6b; }
+.contact-details i { margin-right: 8px; color: #ffd166; transition: transform 0.3s ease, text-shadow 0.3s ease; }
+.contact-details i:hover { transform: scale(1.2); text-shadow: 0 0 8px #ffd166, 0 0 15px #ff6b6b; }
+.connect-btn { display: inline-block; margin-top: 2rem; padding: 14px 28px; background: #0f172a; color: white; border: 2px solid white; border-radius: 50px; font-size: 1.1rem; font-weight: bold; text-decoration: none; transition: all 0.3s ease; }
+.connect-btn:hover { background:  #14b8a6; color: #0f172a; box-shadow: 0 0 15px #14b8a6, 0 0 30px #14b8a6; }
+    /* ==============================
+   Contact Section Title Glow
+   ============================== */
+#contact .section-title {
+  color: #00e6e6; /* default teal */
+  transition: all 0.3s ease-in-out;
+}
+
+#contact .section-title:hover {
+  color: #ff8c00; /* orange on hover */
+  text-shadow: 0 0 15px rgba(255, 140, 0, 0.9);
+}
+/* ==============================
+   Collapsible Code Blocks Styling
+   ============================== */
+details {
+  margin: 1rem 0;
+  background: rgba(255, 140, 0, 0.05); /* soft orange background */
+  border: 1px solid rgba(255, 140, 0, 0.4);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+details summary {
+  font-weight: bold;
+  color: #ff8c00; /* orange highlight */
+  cursor: pointer;
+}
+
+details[open] {
+  background: rgba(255, 140, 0, 0.15);
+  border-color: #ffae42; /* brighter orange */
+  box-shadow: 0 0 10px rgba(255, 140, 0, 0.6);
+}
+.btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #00e6e6, #ff8c00);
+  color: #fff;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  box-shadow: 0 0 15px rgba(255, 140, 0, 0.8);
+  transform: scale(1.05);
+}
+/* ==============================
+   Profile Picture Styling (Square + Glow Hover)
+   ============================== */
+.profile-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px; /* rounded square */
+  border: 4px solid #00e6e6; /* teal border */
+  box-shadow: 0 0 20px rgba(0, 230, 230, 0.6);
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.profile-pic:hover {
+  transform: scale(1.05);
+  border-color: #ff8c00; /* orange on hover */
+  box-shadow: 0 0 30px rgba(255, 140, 0, 0.9);
+}
+.section-title {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 2.2rem;
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+  background: linear-gradient(90deg, #2a003f, #3a005f, #2a003f); /* glowing purple banner */
+  color: #00e6e6;
+  text-shadow: 0 0 12px rgba(204, 85, 0, 0.7); /* burnt orange glow */
+  border-radius: 10px;
+}
+.section-title:hover {
+  color: #cc5500; /* burnt orange */
+  text-shadow: 0 0 18px rgba(204, 85, 0, 1);
+}
+/* About Me */
+#about .section-title {
+  background: linear-gradient(90deg, #2a003f, #4a007f, #2a003f); /* deep purple */
+  color: #00e6e6; /* teal text */
+  text-shadow: 0 0 15px rgba(0, 230, 230, 0.8);
+}
+
+/* Skills */
+#skills .section-title {
+  background: linear-gradient(90deg, #004d4d, #009999, #004d4d); /* teal shades */
+  color: #f5f5f5;
+  text-shadow: 0 0 15px rgba(255, 140, 0, 0.8); /* orange glow */
+}
+
+/* Projects */
+#projects .section-title {
+  background: linear-gradient(90deg, #330033, #660066, #330033); /* magenta-purple */
+  color: #ff8c00; /* orange text */
+  text-shadow: 0 0 15px rgba(0, 230, 230, 0.8); /* teal glow */
+}
+
+
+/* Contact Section with Animated Gradient */
+#contact {
+  background: linear-gradient(135deg, #db5d03, #df8416, #6a0dad, #1e90ff);
+  background-size: 400% 400%;
+  animation: contactGradient 12s ease infinite;
+  padding: 4rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 35px rgba(255, 106, 0, 0.8);
+  color: #fff;
+}
+
+/* Gradient Animation */
+@keyframes contactGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+#contact h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #fff;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+               0 0 30px rgba(255, 106, 0, 1);
+}
+
+/* Form Styling on Gradient Background */
+.contact-form input,
+.contact-form textarea {
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  padding: 0.8rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid #fff;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.contact-form button {
+  background: #fff;
+  color: #ff6a00;
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 0.8rem;
+  transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #6a0dad; /* glowing purple on hover */
+  color: #fff;
+  box-shadow: 0 0 20px rgba(106, 13, 173, 0.9),
+              0 0 25px rgba(30, 144, 255, 0.9);
+}
+
+
+/* Contact Form */
+.contact-form {
+  max-width: 500px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form label {
+  font-weight: bold;
+  color: #00e6e6;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  background: #0a1a2f;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid #ff8c00;
+}
+
+.contact-form button {
+  padding: 0.8rem;
+  background: #00e6e6;
+  color: #2a003f;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #ff8c00;
+  color: #fff;
+  box-shadow: 0 0 12px rgba(255, 140, 0, 0.8);
+}
+.form-status {
+  margin-top: 1rem;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1rem;
+}
+/* Spinner Animation */
+.spinner {
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top: 3px solid #00e6e6;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  margin-left: 8px;
+  display: inline-block;
+  animation: spin 0.8s linear infinite;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.section-title:hover {
+  transform: scale(1.02);
+  text-shadow: 0 0 25px rgba(255, 255, 255, 0.9);
+}
+.section-titles {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: linear-gradient(90deg, #2a003f, #4a007f, #2a003f);
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 3rem;
+}
+
+.section-titles h2 {
+  flex: 1;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #00e6e6;
+  margin: 0 10px;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.section-titles h2:hover {
+  color: #cc5500;
+  text-shadow: 0 0 12px rgba(204, 85, 0, 0.9);
+}
+.section-title {
+  display: inline-block;
+  width: auto;       /* shrink to fit text */
+  padding: 0.5rem 2rem;
+  margin: 0 auto 2rem auto; /* center horizontally */
+  border-radius: 10px;
+  font-size: 2rem;
+}
+/* Section Banner Headings */
+.section-banner {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  padding: 1rem;
+  margin: 2rem 0;
+  background: linear-gradient(90deg, #2a003f, #4a007f, #2a003f);
+  color: #00e6e6;
+  border-radius: 10px;
+  text-shadow: 0 0 10px rgba(255, 140, 0, 0.8);
+  animation: fadeInDown 1s ease-out;
+}
+
+.section-banner:hover {
+  color: #ff8c00;
+  text-shadow: 0 0 20px rgba(255, 140, 0, 1);
+  transform: scale(1.05);
+}
+
+/* Animation */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* Hero Section with Animated Gradient */
+#hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 30vh;   /* much smaller now */
+  text-align: center;
+  background: linear-gradient(135deg, #00e6e6, #00b3b3, #49e41a, #ee7524);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  color: #00e6e6; 
+  padding: 1.5rem 1rem;
+}
+/* Code Snippet Styling */
+pre {
+  background: #0a1a2f; /* dark navy blue */
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1.2rem 0;
+  overflow-x: auto; /* horizontal scroll if needed */
+  box-shadow: 0 0 12px rgba(0, 230, 230, 0.3);
+}
+
+pre code {
+  color: #00e6e6; /* teal text */
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9rem;
+  white-space: pre; /* keep spacing */
+  display: block;
+}
+
+
+/* Name Heading */
+#hero h1 {
+  font-size: 2rem; /* smaller */
+  margin-bottom: 0.5rem;
+  color: #2a00e6; /* teal only */
+  text-shadow: 0 0 8px rgba(50, 0, 230, 0.6);
+}
+
+#hero .highlight {
+  color: #e70505; /* keep teal */
+}
+
+/* Role Subheading */
+#hero .role {
+  font-size: 1.2rem; /* smaller */
+  color: #4500e6ff; /* teal only */
+  text-shadow: 0 0 6px rgba(24, 13, 121, 0.6);
+}
+
+/* Gradient Animation */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}/* Certifications */
+#certifications {
+  background: linear-gradient(135deg, #1e0033, #330066);
+  padding: 4rem 2rem;
+  border-radius: 12px;
+  color: #fff;
+}
+.cert-card {
+  background: rgba(255,255,255,0.05);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(106, 13, 173, 0.5);
+}
+/* Special navbar link for Write Recommendation */
+nav a.recommend-link {
+  color: #4e3afd !important;       /* force bright blue */
+  font-weight: bold;
+  text-shadow: 0 0 8px rgba(30, 144, 255, 0.9);
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+nav a.recommend-link:hover {
+  color: #00e6e6 !important;       /* teal on hover */
+  text-shadow: 0 0 15px rgba(0, 230, 230, 1);
+}
+
+
+
+
+/* Experience Timeline */
+#experience {
+  background: linear-gradient(135deg, #0a1a2f, #1e0033);
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  color: #fff;
+}
+.timeline {
+  border-left: 3px solid #00e6e6;
+  padding-left: 2rem;
+}
+.timeline-item {
+  margin-bottom: 1.5rem;
+}
+.timeline-item h3 {
+  color: #00e6e6;
+  margin-bottom: 0.5rem;
+}
+
+/* Tech Tools */
+#tools {
+  background: linear-gradient(135deg, #001f3f, #0a1a2f);
+  padding: 3rem 2rem;
+  text-align: center;
+}
+.tools-icons i {
+  font-size: 3rem;
+  margin: 1rem;
+  color: #ff8c00;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.tools-icons i:hover {
+  color: #00e6e6;
+  transform: scale(1.2);
+}
+
+/* CV Button in Navbar */
+.cv-btn {
+  background: #ff8c00;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: bold;
+}
+.cv-btn:hover {
+  background: #00e6e6;
+  color: #000;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background: #0a0a0a;
+  color: #e6e6e6;
+}
+body.dark-mode section {
+  background: rgba(255, 255, 255, 0.05);
+}
+/* Make achievement details readable */
+#achievements ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 0.5rem;
+}
+
+#achievements ul li {
+  font-size: 0.9rem;
+  color: #f1f1f1;
+  margin-bottom: 0.3rem;
+}
+#achievements ul li em {
+  color: #ffcc00;
+  font-style: italic;
+}
+#achievements p i {
+  color: #00e6e6;  /* teal glow */
+  margin-right: 8px;
+  text-shadow: 0 0 8px rgba(0, 230, 230, 0.8);
+}
+/* Blog Section */
+#blog {
+  background: linear-gradient(135deg, #1e0033, #330066, #6a0dad);
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  color: #fff;
+}
+
+.blog-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.blog-card {
+  flex: 1 1 300px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+}
+
+.blog-card h3 {
+  color: #00e6e6;
+}
+
+.details {
+  display: none;
+  margin-top: 1rem;
+}
+
+.read-more {
+  margin-top: 1rem;
+  background: #ff8c00;
+  color: #fff;
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  text-shadow: 0 0 6px rgba(255, 140, 0, 0.8);
+}
+
+.read-more:hover {
+  background: #00e6e6;
+  box-shadow: 0 0 12px rgba(0, 230, 230, 0.8);
+}
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #00e6e6;
+}
+
+/* ✅ Special styling for the Write Recommendation button */
+nav ul li .recommend-btn {
+  background: linear-gradient(135deg, #ff8c00, #ff4500);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(255, 140, 0, 0.6);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+nav ul li .recommend-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 230, 230, 0.9);
+}
+.about-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* pushes text left, image right */
+  gap: 2rem;
+  flex-wrap: wrap; /* still responsive */
+  width: 100%;
+}
+
+.about-text {
+  flex: 1; /* takes available left space */
+  min-width: 300px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #f0f0f0;
+}
+
+.about-pic {
+  flex: 0 0 300px; /* fixed width for image side */
+  display: flex;
+  justify-content: center;
+}
+
+.about-pic img {
+  width: 250px;
+  height: 250px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 0 15px rgba(0, 230, 230, 0.6);
+  animation: slideInRight 1.2s ease;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/* Special background for About section */
+#about {
+  background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460); /* dark bluish gradient */
+  padding: 4rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(0, 230, 230, 0.2);
+}
+/* Hero / Intro */
+#hero {
+  background: linear-gradient(135deg, #00e6e6, #ff8c00);
+  padding: 0rem 0rem;
+  text-align: center;
+}
+
+/* About Me */
+#about {
+  background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+  padding: 4rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(0, 230, 230, 0.2);
+}
+
+/* Skills */
+#skills {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  padding: 4rem 2rem;
+}
+
+/* Knowledge Sharing */
+#knowledge-sharing {
+  background: linear-gradient(135deg, #283c86, #45a247);
+  padding: 4rem 2rem;
+}
+
+/* Recommendations */
+#testimonials {
+  background: linear-gradient(135deg, #141e30, #243b55);
+  padding: 4rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 230, 230, 0.25);
+}
+
+/* Contact */
+#contact {
+  background: linear-gradient(135deg, #ff7e5f, #feb47b, #6a11cb, #2575fc);
+  padding: 4rem 2rem;
+  color: #fff;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(255, 126, 95, 0.4);
+}
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 80px; /* adjust based on your navbar height */
+}
+/* Back to Top Button */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00e6e6, #ff8c00);
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(0, 230, 230, 0.6);
+  display: none; /* hidden by default */
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+#backToTop:hover {
+  box-shadow: 0 0 25px rgba(255, 140, 0, 0.9);
+  transform: scale(1.1);
+}
+/* Back to Top Button */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00e6e6, #ff8c00);
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(0, 230, 230, 0.6);
+  opacity: 0;               /* hidden by default */
+  pointer-events: none;      /* disable click when invisible */
+  transition: opacity 0.4s ease-in-out;
+  z-index: 1000;
+}
+
+#backToTop.show {
+  opacity: 1;
+  pointer-events: auto; /* clickable when visible */
+}
+
+#backToTop:hover {
+  box-shadow: 0 0 25px rgba(255, 140, 0, 0.9);
+  transform: scale(1.1);
+}
