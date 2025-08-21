@@ -1,9 +1,8 @@
 # 🌐 DevOps & Cloud Engineer Portfolio 
-# 🌐 DevOps & Cloud Engineer Portfolio  
 
-![GitHub repo size](https://img.shields.io/github/repo-size/Funmitez/devops-portfolio?color=blue&style=for-the-badge)
-![GitHub stars](https://img.shields.io/github/stars/Funmitez/devops-portfolio?color=yellow&style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/Funmitez/devops-portfolio?color=teal&style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/repo-size/Funmitez/Miyyah001-P?color=blue&style=for-the-badge)
+![GitHub stars](https://img.shields.io/github/stars/Funmitez/Miyyah001-P?color=yellow&style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/Funmitez/Miyyah001-P?color=teal&style=for-the-badge)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/adeniyi-islamiat)
 [![Email](https://img.shields.io/badge/Email-Contact%20Me-red?style=for-the-badge&logo=gmail)](mailto:adeniyimiyyah31@gmEmail.com)
 
