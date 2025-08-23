@@ -759,14 +759,6 @@ nav ul li .recommend-btn:hover {
   padding: 4rem 2rem;
 }
 
-/* Recommendations */
-#testimonials {
-  background: linear-gradient(135deg, #141e30, #243b55);
-  padding: 4rem 2rem;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0, 230, 230, 0.25);
-}
-
 /* Contact */
 #contact {
   background: linear-gradient(135deg, #ff7e5f, #feb47b, #6a11cb, #2575fc);
@@ -834,4 +826,57 @@ section {
 #backToTop:hover {
   box-shadow: 0 0 25px rgba(255, 140, 0, 0.9);
   transform: scale(1.1);
+}
+/* Hide the extra content by default */
+.more-content {
+  display: none;
+  margin-top: 10px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Show content when active */
+.more-content.show {
+  display: block;
+}
+
+.more-content {
+  display: none;
+  margin-top: 10px;
+}
+
+.more-content.show {
+  display: block;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.read-more {
+  margin-top: 8px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: teal;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.read-more:hover {
+  background: orange;
+  box-shadow: 0 0 10px rgba(255, 165, 0, 0.8);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* --- Force all expandable blocks to stay visible --- */
+.more-content { 
+  display: block !important; 
+  margin-top: 10px;
+}
+
+/* Hide any Read More buttons everywhere */
+.read-more { 
+  display: none !important; 
 }

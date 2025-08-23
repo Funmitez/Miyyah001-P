@@ -142,13 +142,14 @@ async function loadTestimonials() {
 
 loadTestimonials();
 <script>
-  document.querySelectorAll('a[href^="#"]').forEach(anchor = {
-    anchor.addEventListener("click", function(e) {
-      e.preventDefault();
-      document.querySelector(this.getAttribute("href")).scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-      });
-    })
-  });
 </script>
+
+document.querySelectorAll(".read-more").forEach(button => {
+  button.addEventListener("click", () => {
+    const content = button.previousElementSibling; // targets .more-content
+    content.classList.toggle("show");
+    button.textContent = content.classList.contains("show") 
+      ? "Read Less ↑" 
+      : "Read More ↓";
+  });
+});
